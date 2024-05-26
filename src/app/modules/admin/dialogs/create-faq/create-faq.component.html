@@ -1,0 +1,29 @@
+<!-- CreateFaqComponent HTML -->
+<h1 mat-dialog-title>Créer une nouvelle question / réponse pour la FAQ</h1>
+<div mat-dialog-content>
+  <form [formGroup]="faqForm">
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Question</mat-label>
+      <input matInput formControlName="question" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Réponse</mat-label>
+      <textarea matInput formControlName="response" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Catégorie</mat-label>
+      <mat-select formControlName="categoryId" (selectionChange)="onCategoryChange($event)">
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+      
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Annuler</button>
+  <button mat-button (click)="onSubmit()">Créer</button>
+</div>

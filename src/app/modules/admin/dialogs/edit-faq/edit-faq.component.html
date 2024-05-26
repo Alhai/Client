@@ -1,0 +1,16 @@
+<!-- src/app/dialogs/edit-faq/edit-faq.component.html -->
+<h1 mat-dialog-title>Modifier FAQ</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Question</mat-label>
+    <input matInput [(ngModel)]="data.faq.question">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Réponse</mat-label>
+    <input matInput [(ngModel)]="data.faq.response">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClick()">Annuler</button>
+  <button mat-button [mat-dialog-close]="data.faq" cdkFocusInitial>Enregistrer</button>
+</div>

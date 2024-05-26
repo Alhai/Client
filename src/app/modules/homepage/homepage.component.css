@@ -1,0 +1,88 @@
+.custom-card {
+    display: flex;
+    flex-direction: row; /* Assure que les enfants sont disposés en ligne */
+    align-items: center; /* Alignement vertical au centre */
+    justify-content: space-between; /* Espacement maximal entre les éléments */
+    padding: 20px; 
+}
+  
+  .card-text-content {
+    flex: 1; /* Donne plus de flexibilité et d'espace au texte si nécessaire */
+    padding: 20px; /* Espace intérieur pour la lisibilité */
+  }
+  
+  .right-side-image {
+    flex: 2; /* Moins de flexibilité, adapte la taille de l'image */
+    max-width: 500px; /* Largeur maximale pour l'image */
+    height: auto; /* Garde le ratio de l'image correct */
+  }
+  
+  h1 {
+    font-size: 3.5em; /* Augmente significativement la taille de la police pour h1 */
+    margin-bottom: 0.5em; /* Espacement après le h1 */
+  }
+  
+  h2 {
+    font-size: 2em; /* Taille augmentée pour les h2 */
+    margin-bottom: 0.5em; /* Espacement après chaque h2 */
+  }
+  
+  p, mat-card-actions button {
+    font-size: 1.2em; /* Légère augmentation de la taille du texte pour les paragraphes et les boutons */
+  }
+  
+  mat-card-actions button {
+    background-color: rgb(78, 40, 1); /* Applique la couleur de fond spécifique */
+    color: white; /* Couleur de texte pour une meilleure visibilité */
+    padding: 10px 20px; /* Ajuste le padding pour un meilleur aspect visuel */
+    border: none; /* Enlève les bordures par défaut */
+    border-radius: 5px; /* Ajoute un léger arrondi aux angles du bouton */
+    cursor: pointer; /* Change le curseur au survol pour indiquer la cliquabilité */
+    transition: background-color 0.3s; /* Animation douce pour le changement de couleur */
+  }
+  
+  /* Style pour le hover du bouton */
+  mat-card-actions button:hover {
+    background-color: rgb(197, 137, 93); /* Assombrit légèrement la couleur au survol */
+  }
+  
+  
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.example-card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles pour les images dans la section des fonctionnalités */
+.features-section .example-card img[mat-card-image] {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid yellow;
+}
+
+/* Styles pour les images dans la section des abonnements */
+.subscriptions-section .example-card img[mat-card-image] {
+    width: 300px; /* Images plus grandes */
+    height: 300px;
+    border: none;
+    border-radius: 0;
+    margin: 5px;
+}
+
+.blogs-section .example-card img[mat-card-image] {
+    width: 280px; /* Images plus grandes */
+    height: 150px;
+    border: none;
+    border-radius: 0;
+    margin: 5px;
+}

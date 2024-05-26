@@ -1,0 +1,31 @@
+<!-- src/app/login/login.component.html -->
+<div class="header">
+  <h1>Connexion</h1>
+  <h2>Veuillez indiquer votre email et mot de passe :</h2>
+</div>
+
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="contact-form">
+  <mat-form-field appearance="fill" class="full-width-field">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" name="email" ngModel required [(ngModel)]="email" />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="full-width-field">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput type="password" placeholder="Mot de passe" name="password" ngModel required [(ngModel)]="password" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.form.valid">Connexion</button>
+</form>
+<div class="footer-section social-links">
+  <div class="first-install">
+    <p>ou continuer avec</p>
+    <ul>
+      <li>
+        <a class="facebook" routerLink="/register"><i class="fab fa-facebook-f"></i></a>
+      </li>
+      <li>
+        <a class="google" href="#"><i class="fab fa-google"></i></a>
+      </li>
+    </ul>
+    <p>Vous n'avez pas de compte ? En créer un <a routerLink="/register">maintenant</a></p>
+  </div>
+</div>

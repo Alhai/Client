@@ -1,0 +1,20 @@
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.example-card {
+    flex: 1 1 auto;  /* Adjust as needed for space distribution */
+    display: flex;
+    flex-direction: row;  /* Change to row for horizontal layout */
+    flex-wrap: wrap;  /* Allow wrapping if needed */
+    align-items: flex-start;  /* Align items to the top */
+    overflow: auto;  /* Handle overflow */
+    padding: 10px;  /* Spacing inside the card */
+}
+
+.card-section {
+    flex: 1;  /* Equal space distribution */
+    margin: 10px;  /* Spacing between sections */
+}

@@ -1,0 +1,31 @@
+<div class="content-container" *ngIf="apiLoaded | async">
+    <div class="google-map-container">
+      <google-map [center]="center" [zoom]="zoom" [options]="options">
+        <map-marker *ngFor="let marker of markers"
+                    [position]="marker.position"
+                    [label]="marker.label"
+                    [title]="marker.title"
+                    [options]="marker.options">
+        </map-marker>
+      </google-map>
+    </div>
+  
+    <div class="contact-info">
+      <h2>Contactez-nous</h2> 
+      <div class="description">
+        <div class="info-line">
+          <mat-icon color="primary">phone</mat-icon>
+          <span>+33 4 04 04 04 04</span>
+        </div>
+        <div class="info-line">
+          <mat-icon color="primary">mail</mat-icon>
+          <span>contact@artventurebox.com</span>
+        </div>
+        <div class="info-line">
+          <mat-icon color="primary">location_on</mat-icon>
+          <span>Art’venture Box 20/22 <br> Rue Galilée 38130 <br> Saint Martin d’Hères</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

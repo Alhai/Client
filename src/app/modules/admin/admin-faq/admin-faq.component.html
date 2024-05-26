@@ -1,0 +1,51 @@
+<!-- src/app/components/admin-faq/admin-faq.component.html -->
+<div class="container mt-4">
+    <button mat-raised-button color="primary" (click)="CreateFaqModal()">Créer une question/réponse</button>
+    <button mat-raised-button color="accent" (click)="CreateCategoryModal()">Créer une catégorie</button>
+  
+    <table mat-table [dataSource]="faqs" class="mat-elevation-z8">
+      <ng-container matColumnDef="question">
+        <th mat-header-cell *matHeaderCellDef> Question </th>
+        <td mat-cell *matCellDef="let element"> {{element.question}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="response">
+        <th mat-header-cell *matHeaderCellDef> Réponse </th>
+        <td mat-cell *matCellDef="let element"> {{element.response}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef> Catégorie </th>
+        <td mat-cell *matCellDef="let element"> {{element.category?.name}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" (click)="EditFaqModal(element)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteFaq(element.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="['question', 'response', 'category', 'actions']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['question', 'response', 'category', 'actions'];"></tr>
+    </table>
+  </div>
+  
+<div class="container mt-4">
+    <h2>Catégories existantes</h2>
+    <table mat-table [dataSource]="categories" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nom de la catégorie </th>
+        <td mat-cell *matCellDef="let category"> {{ category.name }} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="['name']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['name'];"></tr>
+    </table>
+  </div>
+  

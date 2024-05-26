@@ -1,0 +1,101 @@
+/* annual.component.css */
+* {
+    box-sizing: border-box; /* Inclut padding et border dans la largeur/hauteur de l'élément */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Assure que le body prend toute la largeur de la fenêtre */
+    overflow-x: hidden; /* Empêche la scrollbar horizontale */
+}
+
+.title {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.custom-card {
+    display: flex;
+    flex-direction: row; /* Les éléments sont alignés horizontalement */
+    align-items: center; /* Centrage vertical des éléments enfants */
+    padding: 20px;
+    margin: 0 auto; /* Centrage du card et élimination des marges latérales qui pourraient causer un débordement */
+    max-width: calc(100% - 40px); /* Calcule la largeur maximale en tenant compte du padding */
+}
+
+.product-image {
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px; /* Espacement entre l'image et la description */
+}
+
+.card-text-content {
+    display: flex;
+    flex-direction: column; /* Organise le contenu de la description et le bouton verticalement */
+    align-items: flex-start; /* Alignement des éléments de texte à gauche */
+    flex-grow: 1; /* Prend l'espace disponible restant après l'image */
+}
+
+.mat-card-actions {
+    width: 100%; /* Assure que le conteneur du bouton prend toute la largeur de card-text-content */
+    display: flex;
+    justify-content: center; /* Centre le bouton dans son conteneur */
+    padding-top: 20px; /* Ajoute de l'espace entre la description et le bouton */
+}
+
+.mat-card-actions button {
+    width: auto; /* Le bouton a une largeur en fonction de son contenu */
+    background-color: rgb(78, 40, 1);
+    color: white;
+    /* padding: 10px 20px; */
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+
+.mat-card-actions button:hover {
+    background-color: rgb(197, 137, 93);
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin: 0 20px; /* Assure un espacement uniforme autour du contenu */
+}
+
+.ratings-container {
+    flex: 0.2;
+    padding: 20px;
+}
+
+.accordion-container {
+    flex: 0.8;
+    padding: 20px;
+}
+
+.ratings-card {
+    margin-bottom: 10px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 24px; /* Ajuste la taille des icônes */
+}
+
+.payment-icon {
+    cursor: pointer; /* Rend l'icône cliquable */
+    color: rgb(100, 100, 100); /* Couleur par défaut des icônes */
+    padding: 10px; /* Espace autour de l'icône pour faciliter le clic */
+}
+
+.payment-icon.selected {
+    color: rgb(78, 40, 1); /* Changement de couleur pour l'icône sélectionnée */
+}
+
+.payment-icon:hover {
+    color: rgb(197, 137, 93); /* Couleur au survol */
+}

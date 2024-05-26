@@ -1,0 +1,51 @@
+<h1>Contactez-nous</h1>
+<form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form">
+  <div class="fields-row">
+    <mat-form-field class="half-width-field">
+      <mat-label>Nom</mat-label>
+      <input matInput placeholder="Votre nom" name="lastName" ngModel required />
+    </mat-form-field>
+
+    <mat-form-field class="half-width-field">
+      <mat-label>Prénom</mat-label>
+      <input matInput placeholder="Votre prénom" name="firstName" ngModel required />
+    </mat-form-field>
+  </div>
+
+  <div class="fields-row">
+    <mat-form-field class="half-width-field">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="Votre email" name="email" ngModel required />
+    </mat-form-field>
+
+    <mat-form-field class="half-width-field">
+      <mat-label>Numéro de commande (Optionnel)</mat-label>
+      <input matInput placeholder="Numéro de commande" name="orderNumber" ngModel />
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="fill" class="full-width-field">
+    <mat-label>Sujet de votre demande</mat-label>
+    <mat-select name="subject" ngModel required>
+      <mat-option value="">Veuillez sélectionner</mat-option>
+      <mat-option value="serviceClient">Service client</mat-option>
+      <mat-option value="supportTechnique">Support technique</mat-option>
+      <mat-option value="autre">Autre</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width-field">
+    <mat-label>Votre message</mat-label>
+    <textarea matInput name="message" rows="4" ngModel required></textarea>
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!contactForm.form.valid"
+    class="send-button">
+    Envoyer
+  </button>
+</form>
+<app-google-map></app-google-map>

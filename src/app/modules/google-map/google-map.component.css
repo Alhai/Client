@@ -1,0 +1,37 @@
+.google-map-container {
+    height: 100%;
+    width: 500px;
+  }
+  
+  .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .contact-info {
+    color: rgb(78, 40, 1);
+    max-width: 400px;
+  }
+  
+  .contact-info mat-icon {
+    color: rgb(78, 40, 1);
+  }
+  
+  .contact-info h2 {
+    color: rgb(78, 40, 1);
+  }
+  
+  
+  .description .info-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .description mat-icon {
+    margin-right: 10px;
+  }
+  
