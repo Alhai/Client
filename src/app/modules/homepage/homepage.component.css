@@ -157,6 +157,10 @@ mat-card-actions button:hover {
   margin-top: 2rem;
 }
 
+.strikethrough {
+  text-decoration: line-through;
+  color: gray; 
+}
 
 .dark-brown-color, .center-text {
   text-align: center;
