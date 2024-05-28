@@ -1,10 +1,11 @@
-mat-toolbar {
+/* Styles de base, déjà fournis */
+.mat-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white; /* Définit la couleur de fond en blanc */
-  height: 120px; /* Augmente la hauteur du toolbar */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optionnel: ajoute une légère ombre pour la profondeur */
+  background-color: white;
+  height: 120px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .toolbar-section {
@@ -14,35 +15,46 @@ mat-toolbar {
 
 .nav-buttons button,
 .action-icons button {
-  margin-right: 8px; /* Espacement entre les boutons */
-  color: rgb(197, 137, 93); /* Couleur du texte */
+  margin-right: 8px;
+  color: rgb(197, 137, 93);
 }
 
 .nav-buttons button:last-child,
 .action-icons button:last-child {
-  margin-right: 0; /* Pas d'espacement à droite pour le dernier bouton */
+  margin-right: 0;
 }
 
 .nav-buttons button:hover,
-.action-icons button:hover {
-  color: rgb(78, 40, 1); /* Couleur au survol pour le texte */
-}
-
+.action-icons button:hover,
 .mat-icon {
-  color: rgb(78, 40, 1); /* Modifie la couleur des icônes */
+  color: rgb(78, 40, 1);
 }
 
-/* Styles spécifiques pour le mat-menu */
-::ng-deep .cdk-overlay-pane {
-  width: 100vw; /* Prend toute la largeur de la vue */
-  max-width: 100vw; /* Empêche toute restriction de largeur maximale */
+/* Media Queries pour Responsive Design */
+@media (max-width: 768px) {
+  .mat-toolbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .toolbar-section {
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .nav-buttons,
+  .action-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-buttons button,
+  .action-icons button {
+    margin: 5px;
+    font-size: 14px; /* Ajustez la taille du texte pour les écrans plus petits */
+  }
 }
 
-::ng-deep .mat-menu-panel {
-  max-width: 100vw; /* Assure que le panneau du menu prend toute la largeur */
-}
-
-::ng-deep .mat-menu-content {
-  justify-content: center; /* Centre le contenu du menu si nécessaire */
-  flex-wrap: wrap; /* Permet au contenu du menu de s'enrouler */
-}
+/* Autres ajustements si nécessaire */

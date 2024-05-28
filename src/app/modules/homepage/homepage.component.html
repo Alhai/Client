@@ -1,20 +1,33 @@
 <mat-card class="custom-card">
-    <div class="card-text-content">
-      <h1>
-        Bienvenue chez Art'Venture Box
-      </h1>
-      <h2>Ton aventure créative commence maintenant</h2>
-      <mat-card-actions>
-        <button mat-button>J'achète ma box</button>
-      </mat-card-actions>
-    </div>
-    <img src="../../../assets/homepage/kit.png" alt="" class="right-side-image">
-  </mat-card>
-  
+  <div class="card-text-content">
+    <h1 class="dark-brown-color">
+      <b
+        >Bienvenue chez <br /><br />
+        <span>Art'Venture Box</span>
+      </b>
+    </h1>
+    <h2>
+      <span class="light-brown-color">Ton aventure</span> <br />
+      <span class="dark-brown-color">créative</span> <br />
+      <span class="light-brown-color">commence maintenant</span>
+    </h2>
+    <h3>
+      Parcourez notre sélection de produits respectueux de l'environnement
+      <br />
+      et faites en sorte que chaque achat compte
+    </h3>
+    <mat-card-actions>
+      <button mat-button>J'achète ma box</button>
+    </mat-card-actions>
+  </div>
+  <img src="../../../assets/homepage/box.png" alt="" class="right-side-image" />
+</mat-card>
 
 <mat-card>
   <mat-card-header>
-    <h2>Pourquoi choisir Art'venture Box ?</h2>
+    <h2 class="dark-brown-color center-text">
+      Pourquoi choisir Art'venture Box ?
+    </h2>
   </mat-card-header>
   <div class="cards-container features-section">
     <mat-card class="example-card">
@@ -24,7 +37,10 @@
         alt="Produit de haute qualité"
       />
       <mat-card-content>
-        <p>Produit de haute qualité</p>
+        <p>
+          Produit de <br />
+          haute qualité
+        </p>
         <p>
           Les produits soigneusement sélectionnés dans nos box créatives
           témoignent d'une qualité exceptionnelle, garantissant une expérience
@@ -36,10 +52,13 @@
       <img
         mat-card-image
         src="../../../assets/homepage/france_drapeau.png"
-        alt="Produit de haute qualité"
+        alt="Artisanat Français"
       />
       <mat-card-content>
-        <p>Artisanat Français</p>
+        <p>
+          Artisanat <br />
+          Français
+        </p>
         <p>
           Nous sommes fiers de collaborer étroitement avec l'artisanat français,
           sélectionnant avec soin des produits qui incarnent l'authenticité et
@@ -51,10 +70,13 @@
       <img
         mat-card-image
         src="../../../assets/homepage/team.png"
-        alt="Produit de haute qualité"
+        alt="Équipe de créatifs"
       />
       <mat-card-content>
-        <p>Équipe de créatifs</p>
+        <p>
+          Équipe de <br />
+          créatifs
+        </p>
         <p>
           Notre équipe regorge de talents créatifs, passionnés et innovants,
           apportant une touche unique à chaque aspect de notre travail,
@@ -67,7 +89,7 @@
       <img
         mat-card-image
         src="../../../assets/homepage/original.png"
-        alt="Produit de haute qualité"
+        alt="Originalité"
       />
       <mat-card-content>
         <p>Originalité</p>
@@ -80,16 +102,17 @@
     </mat-card>
   </div>
 </mat-card>
+
 <mat-card>
   <mat-card-header>
-    <h2>Nos abonnements</h2>
+    <h2 class="dark-brown-color center-text">Nos abonnements</h2>
   </mat-card-header>
   <div class="cards-container subscriptions-section">
     <mat-card class="example-card">
       <img
         mat-card-image
-        src="../../../assets/homepage/toothbrush.png"
-        alt="Produit de haute qualité"
+        src="../../../assets/homepage/pearl-box.jpg"
+        alt="Abonnement Mensuel"
       />
       <mat-card-content>
         <p>Abonnement Mensuel (1 box)</p>
@@ -99,8 +122,8 @@
     <mat-card class="example-card">
       <img
         mat-card-image
-        src="../../../assets/homepage/tot_bag.png"
-        alt="Produit de haute qualité"
+        src="../../../assets/homepage/wool-box.jpg"
+        alt="Abonnement Trimestriel"
       />
       <mat-card-content>
         <p>Abonnement Trimestriel (2 box)</p>
@@ -110,137 +133,83 @@
     </mat-card>
     <mat-card class="example-card">
       <a href="annual">
-      <img
-        mat-card-image
-        src="../../../assets/homepage/lamp.png"
-        alt="Produit de haute qualité"
-      />
-      <mat-card-content>
-        <button>Je M'abonne</button>
-      </mat-card-content>
-    </a>
+        <img
+          mat-card-image
+          src="../../../assets/homepage/paint-box.jpg"
+          alt="Abonnement Annuel"
+        />
+        <mat-card-actions>
+          <button>Je M'abonne</button>
+        </mat-card-actions>
+      </a>
     </mat-card>
-    
   </div>
 </mat-card>
+<mat-card>
+    <video controls class="responsive-video">
+      <source
+        src="../../../assets/videos/Montage-VFinale.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+</mat-card>
+
 
 <mat-card>
-  <mat-card-content>
-    <h3>CARTE CADEAU</h3>
-    <h2>NOTRE E-CARTE CADEAU</h2>
-    <mat-card-header>
-      <h2>CARTE CADEAU ABONNEMENT L'ART'VENTURE BOX</h2>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        Vous avez envie de le surprendre ? De faire durer sa fête toute l’année
-        ? Foncez sur nos e-carte cadeaux Box 3, 6 ou 12 mois et en quelques
-        clics vous avez le cadeau parfait, il n’y a plus qu’à l’imprimer ! Le
-        code d'activation est valable un an à compter de la date d'achat de la
-        carte cadeau.
-      </p>
-      <mat-card-actions>
-        <button mat-button>3 MOIS</button>
-        <button mat-button>6 MOIS</button>
-        <button mat-button>12 MOIS</button>
-        <mat-form-field class="example-full-width">
-          <mat-label>Number Picker</mat-label>
-          <input type="number" matInput value="Sushi" />
-        </mat-form-field>
-      </mat-card-actions>
-    </mat-card-content>
-  </mat-card-content>
-</mat-card>
-<mat-card>
   <mat-card-header>
-    <h2>Nos clients parlent de nous</h2>
+    <h2 class="dark-brown-color center-text">Nos clients parlent de nous</h2>
   </mat-card-header>
   <div class="cards-container testimonials-section">
-    <mat-card-content>
-      <img
-        mat-card-image
-        src="../../../assets/homepage/avis_1.png"
-        alt="Avis de Sarah T."
-      />
-      <h3>Sarah T.</h3>
-      <p>
-        Je viens de recevoir l'Art'venture Box en cadeau et je suis enchantée !
-        Cette box créative regorge de trésors artistiques soigneusement
-        sélectionnés, offrant une expérience immersive et stimulante. Chaque
-        élément, du matériel d'art aux instructions détaillées, est parfaitement
-        pensé pour inspirer ma créativité. C'est un cadeau idéal pour tous les
-        amateurs d'art et d'artisanat !
-      </p>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-    </mat-card-content>
-    <mat-card-content>
-      <img
-        mat-card-image
-        src="../../../assets/homepage/avis_2.png"
-        alt="Avis de Sarah T."
-      />
-      <h3>Alex R.</h3>
-      <p>
-        L'abonnement annuel à l'Art'venture Box est un investissement artistique
-        qui en vaut vraiment la peine ! Recevoir une box chaque mois, c'est une
-        économie de temps et d'argent, sans compromis sur la qualité. Chaque box
-        est une surprise bienvenue, avec des projets captivants et des
-        fournitures artistiques de première qualité. C'est pratique, économique
-        et une source d'inspiration constante pour ma créativité !
-      </p>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star_border</mat-icon>
-    </mat-card-content>
-    <mat-card-content>
-      <img
-        mat-card-image
-        src="../../../assets/homepage/avis_3.png"
-        alt="Avis de Sarah T."
-      />
-      <h3>Maya G.</h3>
-      <p>
-        L'abonnement trimestriel à l'Art'venture Box est une vraie pépite !
-        Chaque envoi est une source d'inspiration avec des fournitures
-        artistiques de qualité. La thématique sur la Corée du Sud ce trimestre
-        était captivante. Recommandé pour tous les amateurs d'art !
-      </p>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star</mat-icon>
-      <mat-icon>star_half</mat-icon>
-    </mat-card-content>
+    <div class="example-card">
+      <mat-card-content>
+        <img mat-card-image src="../../../assets/homepage/avis_1.png" alt="Avis de Sarah T.">
+        <h3>Sarah T.</h3>
+        <p>Je viens de recevoir l'Art'venture Box en cadeau et je suis enchantée ! Cette box créative regorge de trésors artistiques soigneusement sélectionnés, offrant une expérience immersive et stimulante. Chaque élément, du matériel d'art aux instructions détaillées, est parfaitement pensé pour inspirer ma créativité. C'est un cadeau idéal pour tous les amateurs d'art et d'artisanat !</p>
+        <div class="stars">
+          <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+        </div>
+      </mat-card-content>
+    </div>
+    <div class="example-card">
+      <mat-card-content>
+        <img mat-card-image src="../../../assets/homepage/avis_2.png" alt="Avis de Alex R.">
+        <h3>Alex R.</h3>
+        <p>L'abonnement annuel à l'Art'venture Box est un investissement artistique qui en vaut vraiment la peine ! Recevoir une box chaque mois, c'est une économie de temps et d'argent, sans compromis sur la qualité. Chaque box est une surprise bienvenue, avec des projets captivants et des fournitures artistiques de première qualité. C'est pratique, économique et une source d'inspiration constante pour ma créativité !</p>
+        <div class="stars">
+          <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon>
+        </div>
+      </mat-card-content>
+    </div>
+    <div class="example-card card-border">
+      <mat-card-content >
+        <img mat-card-image src="../../../assets/homepage/avis_3.png" alt="Avis de Maya G.">
+        <h3>Maya G.</h3>
+        <p>L'abonnement trimestriel à l'Art'venture Box est une vraie pépite ! Chaque envoi est une source d'inspiration avec des fournitures artistiques de qualité. La thématique sur la Corée du Sud ce trimestre était captivante. Recommandé pour tous les amateurs d'art !</p>
+        <div class="stars">
+          <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon>
+        </div>
+      </mat-card-content>
+    </div>
   </div>
 </mat-card>
 
-<mat-card>
-  <mat-card-header>
-    <h2>Notre Blog</h2>
-  </mat-card-header>
+
+<mat-card style="background-color: rgb(197, 137, 93);">
+    <h2 class="white-color">Notre Blog</h2>
   <div class="cards-container blogs-section">
     <mat-card class="example-card">
       <img
         mat-card-image
-        src="../../../assets/homepage/flower.png"
-        alt="Produit de haute qualité"
+        src="../../../assets/homepage/exterior-painting.jpg"
+        alt="Exploration artistique"
       />
       <mat-card-content>
-        <h3>
-          Exploration artistique : Comment trouver l'inspiration dans le monde
-          qui nous entoure
+        <h3 class="dark-brown-color">
+          Exploration artistique : Comment trouver l'inspiration dans le monde qui nous entoure
         </h3>
-        <p>
-          Découvrez comment observer attentivement le monde qui nous entoure
-          peut nourrir votre créativité artistique, avec des conseils pratiques
-          pour stimuler votre imagination et redécouvrir la beauté dans les
-          petites choses de la vie.
+        <p class="dark-brown-color">
+          Découvrez comment observer attentivement le monde qui nous entoure peut nourrir votre créativité artistique, avec des conseils pratiques pour stimuler votre imagination et redécouvrir la beauté dans les petites choses de la vie.
         </p>
         <mat-card-actions>LIRE PLUS</mat-card-actions>
       </mat-card-content>
@@ -248,15 +217,14 @@
     <mat-card class="example-card">
       <img
         mat-card-image
-        src="../../../assets/homepage/recycling.png"
-        alt="Produit de haute qualité"
+        src="../../../assets/homepage/pottery.jpg"
+        alt="L'art du recyclage"
       />
       <mat-card-content>
-        <h3>
-          L'art du recyclage : Transformez vos déchets en œuvres d'art
-          étonnantes
+        <h3 class="dark-brown-color">
+          Les 7 loisirs artistiques accessibles à tous, peu importe votre niveau de talent
         </h3>
-        <p>
+        <p class="dark-brown-color">
           Explorez comment donner une nouvelle vie à vos déchets en les
           transformant en œuvres d'art uniques, avec des techniques créatives et
           des idées inspirantes pour des projets écologiques qui transcendent
@@ -268,20 +236,15 @@
     <mat-card class="example-card">
       <img
         mat-card-image
-        src="../../../assets/homepage/fertilizer.png"
-        alt="Produit de haute qualité"
+        src="../../../assets/homepage/work-plan.jpg"
+        alt="Peindre avec passion"
       />
       <mat-card-content>
-        <h3>
-          Peindre avec passion : Les secrets pour libérer votre créativité sur
-          la toile
+        <h3 class="dark-brown-color">
+          Peindre avec passion : Les secrets pour libérer votre créativité sur la toile
         </h3>
-        <p>
-          Plongez dans le processus de création artistique avec passion,
-          découvrez des conseils pour surmonter les blocages créatifs et trouvez
-          votre propre style distinctif dans la peinture, en cultivant une
-          connexion profonde avec votre sujet et en exprimant votre vision
-          unique à travers la toile.
+        <p class="dark-brown-color ">
+          Plongez dans le processus de création artistique avec passion, découvrez des conseils pour surmonter les blocages créatifs et trouvez votre propre style distinctif dans la peinture, en cultivant une connexion profonde avec votre sujet et en exprimant votre vision unique à travers la toile.
         </p>
         <mat-card-actions>LIRE PLUS</mat-card-actions>
       </mat-card-content>
@@ -289,22 +252,27 @@
   </div>
 </mat-card>
 
-<mat-card>
-  <mat-card-header>
-    <h3>La Newsletter</h3>
-  </mat-card-header>
-  <mat-card-content>
-    <p>“Reste créatif et informé.e”</p>
-    <p>
-      Rejoignez notre newsletter pour des conseils artistiques, des offres
-      exclusives dans votre boîte de réception. Pas de spam, nous vous le
-      promettons.
-    </p>
-    <mat-form-field class="example-full-width">
-      <mat-label>Entrez votre E-mail</mat-label>
-      <input matInput />
-    </mat-form-field>
-    <button mat-raised-button color="primary">Je m'inscris</button>
+<mat-card >
+  <mat-card-content class="newsletter-content bk-light-brown-color">
+    <div class="image-container">
+      <img src="../../../assets/homepage/mountain-of-paint.jpg" alt="" class="newsletter-image">
+    </div>
+
+    <div class="text-container bk-white-color">
+        <h3 class="news-title">Reste créatif et informé.e</h3>
+      <p class="news-text">
+        Rejoignez notre newsletter pour des conseils artistiques, <br> des offres
+        exclusives dans votre boîte de réception. <br> Pas de spam, nous vous le
+        promettons.
+      </p>
+      <mat-form-field class="example-full-width enter-email">
+        <mat-label>Entrez votre E-mail</mat-label>
+        <input matInput />
+        <mat-card-actions>
+          <button mat-button>Je m'inscris</button>
+        </mat-card-actions>
+      </mat-form-field>
+    </div>
   </mat-card-content>
 </mat-card>
-<app-informations></app-informations>
+

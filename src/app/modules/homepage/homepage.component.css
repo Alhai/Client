@@ -1,88 +1,291 @@
-.custom-card {
-    display: flex;
-    flex-direction: row; /* Assure que les enfants sont disposés en ligne */
-    align-items: center; /* Alignement vertical au centre */
-    justify-content: space-between; /* Espacement maximal entre les éléments */
-    padding: 20px; 
+
+.example-card, .custom-card, .cards-container {
+  max-width: 100%; 
+  overflow: hidden; 
 }
-  
-  .card-text-content {
-    flex: 1; /* Donne plus de flexibilité et d'espace au texte si nécessaire */
-    padding: 20px; /* Espace intérieur pour la lisibilité */
-  }
-  
-  .right-side-image {
-    flex: 2; /* Moins de flexibilité, adapte la taille de l'image */
-    max-width: 500px; /* Largeur maximale pour l'image */
-    height: auto; /* Garde le ratio de l'image correct */
-  }
-  
-  h1 {
-    font-size: 3.5em; /* Augmente significativement la taille de la police pour h1 */
-    margin-bottom: 0.5em; /* Espacement après le h1 */
-  }
-  
-  h2 {
-    font-size: 2em; /* Taille augmentée pour les h2 */
-    margin-bottom: 0.5em; /* Espacement après chaque h2 */
-  }
-  
-  p, mat-card-actions button {
-    font-size: 1.2em; /* Légère augmentation de la taille du texte pour les paragraphes et les boutons */
-  }
-  
-  mat-card-actions button {
-    background-color: rgb(78, 40, 1); /* Applique la couleur de fond spécifique */
-    color: white; /* Couleur de texte pour une meilleure visibilité */
-    padding: 10px 20px; /* Ajuste le padding pour un meilleur aspect visuel */
-    border: none; /* Enlève les bordures par défaut */
-    border-radius: 5px; /* Ajoute un léger arrondi aux angles du bouton */
-    cursor: pointer; /* Change le curseur au survol pour indiquer la cliquabilité */
-    transition: background-color 0.3s; /* Animation douce pour le changement de couleur */
-  }
-  
-  /* Style pour le hover du bouton */
-  mat-card-actions button:hover {
-    background-color: rgb(197, 137, 93); /* Assombrit légèrement la couleur au survol */
-  }
-  
-  
-.cards-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
+
+.custom-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card-text-content {
+  flex: 1;
+  padding: 20px;
+  padding-left: 50px;
+}
+
+.light-brown-color {
+  color: rgb(197, 137, 93);
+}
+
+.dark-brown-color {
+  color: rgb(78, 40, 1);
+}
+.bk-light-brown-color{
+  background-color:rgb(197, 137, 93);
+}
+.bk-white-color{
+  background-color:rgb(255, 255, 255);
+}
+.white-color {
+  color: white;
+  text-align: center;
+
+}
+
+.card-border{
+  border-color: rgb(78, 40, 1);
+  align-items: center;
+}
+
+
+h1 span,
+h2 span {
+  display: inline;
+}
+
+.mat-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+ .center-text {
+  text-align: center;
+  width: 100%;
+  margin: 2rem;
+}
+
+.right-side-image {
+  flex: 2;
+  max-width: 500px;
+  height: auto;
+  transform: rotate(-65deg) translateX(7%);
+  margin-right: 0%;
+  transition: transform 0.5s ease;
+}
+.testimonials-section {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+  padding: 20px 0; 
 }
 
 .example-card {
-    flex: 1 1 300px;
-    max-width: 300px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex: 1 1 30%; 
+  margin: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+  max-width: 350px;
+  border: 2px solid rgb(78, 40, 1); 
+  padding: 10px;
+  border-radius: 0.5rem;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 
-/* Styles pour les images dans la section des fonctionnalités */
+h1 {
+  font-size: 5.5em;
+  margin-bottom: 0.5em;
+  padding-left: 50px;
+}
+h2 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  padding-left: 50px;
+  padding-top: 3rem;
+}
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  padding-left: 50px;
+}
+p,
+mat-card-actions button {
+  font-size: 1.2em;
+}
+
+mat-card-actions button {
+  background-color: rgb(78, 40, 1);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+mat-card-actions button:hover {
+  background-color: rgb(197, 137, 93);
+}
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .features-section .example-card img[mat-card-image] {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 4px solid yellow;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid yellow;
 }
-
-/* Styles pour les images dans la section des abonnements */
 .subscriptions-section .example-card img[mat-card-image] {
-    width: 300px; /* Images plus grandes */
-    height: 300px;
-    border: none;
-    border-radius: 0;
-    margin: 5px;
+  width: 300px;
+  height: 300px;
+  border: none;
+  border-radius: 0;
+  margin: 5px;
+}
+.blogs-section .example-card img[mat-card-image] {
+  width: 280px;
+  height: 150px;
+  border: none;
+  border-radius: 0;
+  margin: 5px;
+}
+.responsive-video {
+  width: 60%;
+  height: auto; 
+  margin: auto; 
+  display: block;
 }
 
-.blogs-section .example-card img[mat-card-image] {
-    width: 280px; /* Images plus grandes */
-    height: 150px;
-    border: none;
-    border-radius: 0;
-    margin: 5px;
+
+.dark-brown-color, .center-text {
+  text-align: center;
+  color: rgb(78, 40, 1);
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.example-card {
+  flex: 1 1 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mat-card-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.mat-card-content p {
+  text-align: center;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.button {
+  background-color: rgb(78, 40, 1);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(197, 137, 93);
+}
+.newsletter-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  text-align: left;
+  margin: 4rem;
+  border-radius: 2rem;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 460px;
+}
+
+.newsletter-image {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  flex: 2;
+  max-width: 600px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 1rem;
+
+}
+.example-full-width{
+  width: 100%;
+}
+
+.news-text{
+  margin-left: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.news-title{
+    margin-top: 1rem;
+    margin-right: 2rem;
+    text-align: center;
+    color: rgb(78, 40, 1);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px; /* Réduire la taille pour les petits écrans */
+    margin: 10px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 8px;
+  }
+  h3 {
+    font-size: 18px;
+    margin: 6px;
+  }
+  p {
+    font-size: 16px; /* Ajuster la taille du texte pour améliorer la lisibilité */
+    margin: 4px;
+  }
+}
+
+/* Ajustements pour très petits écrans */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px; /* Encore plus petit pour les très petits écrans */
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
 }
