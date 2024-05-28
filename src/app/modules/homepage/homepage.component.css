@@ -154,6 +154,7 @@ mat-card-actions button:hover {
   height: auto; 
   margin: auto; 
   display: block;
+  margin-top: 2rem;
 }
 
 
