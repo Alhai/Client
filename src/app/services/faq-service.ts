@@ -2,14 +2,17 @@ import { FaqItemsModel } from '../models/faq-dto';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
+console.log("TOTI", environment.apiUrl);
 
 @Injectable({
   providedIn: 'root'
 })
 export class FaqService {
-  private apiUrl = 'http://localhost:1337/faq';
+  private apiUrl = `${environment.apiUrl}/faq`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAllFaqs(): Observable<FaqItemsModel[]> {
     return this.http.get<FaqItemsModel[]>(`${this.apiUrl}`);
@@ -30,7 +33,7 @@ export class FaqService {
   deleteFaq(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
-  
+
   getFaqsByCategoryId(categoryId: string): Observable<FaqItemsModel[]> {
     return this.http.get<FaqItemsModel[]>(`${this.apiUrl}?category=${categoryId}`);
   }
