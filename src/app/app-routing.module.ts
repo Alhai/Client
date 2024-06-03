@@ -2,7 +2,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AdminFaqComponent } from './modules/admin/admin-faq/admin-faq.component';
 import { AnnualComponent } from './modules/offers/annual/annual.component';
-import { BlogComponent } from './modules/blog/blog.component';
+import { Article3Component } from './modules/article3/article3.component';
+import { ArticlesComponent } from './modules/articles/articles.component';
 import { ConceptComponent } from './modules/concept/concept.component';
 import { ContactComponent } from './modules/contact/contact.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
@@ -12,6 +13,7 @@ import { HomepageComponent } from './modules/homepage/homepage.component';
 import { LoginComponent } from './modules/login/login.component';
 import { NgModule } from '@angular/core';
 import { RegisterComponent } from './modules/register/register.component';
+import { ShoppingCartComponent } from './modules/shopping-cart/shopping-cart.component';
 import { SubscribeComponent } from './modules/subscribe/subscribe.component';
 import { TrimonthlyComponent } from './modules/offers/trimonthly/trimonthly.component';
 import { UniqueComponent } from './modules/offers/unique/unique.component';
@@ -31,7 +33,10 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'admin-faq', component: AdminFaqComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'blog', component: BlogComponent },
+  { path: 'articles', component: ArticlesComponent },
+  { path: 'article-3', component: Article3Component },
+  { path: 'shopping-cart', component: ShoppingCartComponent },
+
 
 
 

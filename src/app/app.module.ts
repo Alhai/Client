@@ -5,6 +5,8 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { AnnualComponent } from './modules/offers/annual/annual.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { Article3Component } from './modules/article3/article3.component';
+import { ArticlesComponent } from './modules/articles/articles.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { ConceptComponent } from './modules/concept/concept.component';
@@ -43,7 +45,7 @@ import { RegisterComponent } from './modules/register/register.component';
 import { SubscribeComponent } from './modules/subscribe/subscribe.component';
 import { TrimonthlyComponent } from './modules/offers/trimonthly/trimonthly.component';
 import { UniqueComponent } from './modules/offers/unique/unique.component';
-import { BlogComponent } from './modules/blog/blog.component';
+import { ShoppingCartComponent } from './modules/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,9 @@ import { BlogComponent } from './modules/blog/blog.component';
     EditFaqComponent,
     CreateFaqComponent,
     CreateCategoryComponent,
-    BlogComponent,
+    ArticlesComponent,
+    Article3Component,
+    ShoppingCartComponent,
 
   ],
   imports: [
@@ -99,7 +103,7 @@ import { BlogComponent } from './modules/blog/blog.component';
     ReactiveFormsModule,
     GoogleMapsModule
   ],
- 
+
   providers: [],
   bootstrap: [AppComponent]
 })

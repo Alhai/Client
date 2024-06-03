@@ -1,0 +1,83 @@
+.shopping-cart-container {
+    display: flex;
+    gap: 20px;
+    padding: 2rem;
+    text-align: center; /* Can be removed if you prefer left alignment */
+  }
+  
+  .cart-info-section {
+    flex: 1;
+  }
+  
+  .cart-summary-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(197, 137, 93); ;
+  }
+  
+  .cart-item {
+    display: flex; /* Remove align-items: center; */
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .cart-item-details {
+    display: flex;
+    flex-direction: column; /* Remove if you want details side-by-side */
+  }
+  
+  .cart-item-price {
+    font-weight: bold;
+    /* Add margin-left: auto; to align right within .cart-item-details */
+  }
+  
+  .promo-code-input {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .cart-total-label {
+    margin-right: 10px;
+  }
+  
+  .cart-info-section .form-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .cart-info-section mat-form-field {
+    width: 100%;
+  }
+  
+  .login-link {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .cart-connect {
+    background-color: rgb(197, 137, 93);
+    padding: 1rem;
+  }
+  
+  .loginLink{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  hr{
+    width: 100%;
+    margin: 1rem;
+  }

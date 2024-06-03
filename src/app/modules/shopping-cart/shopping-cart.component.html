@@ -1,0 +1,53 @@
+<div class="shopping-cart-container">
+    <div class="cart-info-section">
+        <div class="cart-connect">
+            <mat-card-content>
+                Vous avez déjà un compte ? <span class="loginLink" routerLink="/login" style="padding: 0; margin: 0;">Connectez-vous</span>
+              </mat-card-content>
+        </div>
+      <h2 class="cart-info-title">Informations de commande</h2>
+  
+      <mat-form-field>
+        <mat-label>Nom</mat-label>
+        <input matInput type="text" [(ngModel)]="customerName">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="customerEmail">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Numéro de téléphone</mat-label>
+        <input matInput type="tel" [(ngModel)]="customerPhone">
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" (click)="placeOrder()">Continuer et Payer</button>
+    </div>
+  
+    <div class="cart-summary-section">
+        <p>Votre commande</p>
+      <div class="cart-item">
+        <img src="../../../assets/homepage/pearl-box.jpg" alt="Product Image">
+        <div class="cart-item-details">
+          <h3>Abonnement annuel</h3>
+            <span>Quantité 1</span>
+        </div>
+        <span class="cart-item-price">300€</span>
+      </div>
+  <hr/>
+      <div class="promo-code-input">
+        <mat-form-field>
+          <mat-label>Code promo</mat-label>
+          <input matInput type="text" [(ngModel)]="promoCode">
+        </mat-form-field>
+        <button mat-button (click)="applyPromoCode()">Appliquer</button>
+      </div>
+   
+      <hr />
+      <div class="cart-total">
+        <span class="cart-total-label">Total:</span>
+        <span class="cart-total-price">300€</span>
+      </div>
+    </div>
+  </div>

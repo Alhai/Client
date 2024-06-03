@@ -1,13 +1,12 @@
-/* annual.component.css */
 * {
-    box-sizing: border-box; /* Inclut padding et border dans la largeur/hauteur de l'élément */
+    box-sizing: border-box;
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%; /* Assure que le body prend toute la largeur de la fenêtre */
-    overflow-x: hidden; /* Empêche la scrollbar horizontale */
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .title {
@@ -18,40 +17,39 @@ html, body {
 
 .custom-card {
     display: flex;
-    flex-direction: row; /* Les éléments sont alignés horizontalement */
-    align-items: center; /* Centrage vertical des éléments enfants */
+    flex-direction: row;
+    align-items: center;
     padding: 20px;
-    margin: 0 auto; /* Centrage du card et élimination des marges latérales qui pourraient causer un débordement */
-    max-width: calc(100% - 40px); /* Calcule la largeur maximale en tenant compte du padding */
+    margin: 0 auto;
+    max-width: calc(100% - 40px);
 }
 
 .product-image {
     max-width: 300px;
     height: auto;
-    margin-right: 20px; /* Espacement entre l'image et la description */
+    margin-right: 20px;
 }
 
 .card-text-content {
     display: flex;
-    flex-direction: column; /* Organise le contenu de la description et le bouton verticalement */
-    align-items: flex-start; /* Alignement des éléments de texte à gauche */
-    flex-grow: 1; /* Prend l'espace disponible restant après l'image */
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .mat-card-actions {
-    width: 100%; /* Assure que le conteneur du bouton prend toute la largeur de card-text-content */
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centre le bouton dans son conteneur */
-    padding-top: 20px; /* Ajoute de l'espace entre la description et le bouton */
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .mat-card-actions button {
-    width: auto; /* Le bouton a une largeur en fonction de son contenu */
-    background-color: rgb(78, 40, 1);
-    color: white;
+    width: auto;
     /* padding: 10px 20px; */
     /* border-radius: 5px; */
     cursor: pointer;
+    align-items: center;
 }
 
 .mat-card-actions button:hover {
@@ -62,7 +60,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    margin: 0 20px; /* Assure un espacement uniforme autour du contenu */
+    margin: 0 20px;
 }
 
 .ratings-container {
@@ -83,19 +81,45 @@ html, body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    font-size: 24px; /* Ajuste la taille des icônes */
+    font-size: 24px;
 }
 
 .payment-icon {
-    cursor: pointer; /* Rend l'icône cliquable */
-    color: rgb(100, 100, 100); /* Couleur par défaut des icônes */
-    padding: 10px; /* Espace autour de l'icône pour faciliter le clic */
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+    padding: 10px;
 }
 
 .payment-icon.selected {
-    color: rgb(78, 40, 1); /* Changement de couleur pour l'icône sélectionnée */
+    color: rgb(78, 40, 1);
 }
 
 .payment-icon:hover {
-    color: rgb(197, 137, 93); /* Couleur au survol */
+    color: rgb(197, 137, 93);
 }
+
+img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    padding-right: 1rem;
+  }
+  
+  .payment-icon {
+    width: 40px; 
+    height: auto;
+  }
+  
+  .payment-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .payment-icon {
+      width: 24px; /* Reduce width for smaller screens */
+      margin: 0 5px; /* Adjust spacing for smaller screens */
+    }
+  }

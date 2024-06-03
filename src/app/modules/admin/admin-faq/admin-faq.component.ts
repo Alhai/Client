@@ -28,7 +28,6 @@ export class AdminFaqComponent implements OnInit {
   loadFaqs(): void {
     this.faqService.getAllFaqs().subscribe({
       next: (faqItem) => {
-        console.log('Loaded categories:', faqItem); // Ajoutez ce log pour vérifier les données
         this.faqs = faqItem;
       },
       error: (error) => {
@@ -39,9 +38,8 @@ export class AdminFaqComponent implements OnInit {
 
   loadCategories(): void {
     this.categoryService.getAllCategories().subscribe({
-      next: (categories) => {
-        console.log('Loaded categories:', categories); // Ajoutez ce log pour vérifier les données
-        this.categories = categories;
+      next: (categoriesItem) => {
+        this.categories = categoriesItem;
       },
       error: (error) => {
         console.error('Failed to load categories:', error);

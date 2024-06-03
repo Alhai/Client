@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CategoryItemModel } from 'src/app/models/category-faq.dto';
 import { CategoryService } from 'src/app/services/category-service';
+import { FaqItemsModel } from 'src/app/models/faq-dto';
 import { FaqService } from 'src/app/services/faq-service';
 
 @Component({
@@ -9,8 +11,8 @@ import { FaqService } from 'src/app/services/faq-service';
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent implements OnInit {
-  categories: any[] = [];
-  faqs: any[] = [];
+  categories: CategoryItemModel[] = [];
+  faqs: FaqItemsModel[] = [];
   selectedCategoryId?: string;
 
   constructor(private faqService: FaqService, private categoryService: CategoryService) { }
@@ -26,10 +28,10 @@ export class FaqComponent implements OnInit {
   }
 
   onCategorySelected(categoryId: string): void {
-    this.selectedCategoryId = categoryId; // Assurez-vous que cette ligne est atteinte avec un ID correct
+    this.selectedCategoryId = categoryId;
     this.faqService.getFaqsByCategoryId(categoryId).subscribe({
       next: (faqs) => {
-        this.faqs = faqs; // Assurez-vous que les FAQs sont filtrées et retournées
+        this.faqs = faqs; 
       },
       error: (error) => console.error('Error loading FAQs for category:', error),
       complete: () => console.log('FAQ loading complete for category')

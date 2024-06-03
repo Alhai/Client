@@ -1,0 +1,43 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    width: calc(100% - 40px); /* Marge de 20px de chaque côté */
+    max-width: 800px; /* Limite maximale de la largeur */
+    margin: 0 auto; /* Centrage horizontal du contenu */
+}
+
+h1, h2, p {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive design pour les images */
+@media (max-width: 768px) {
+    .blog-image-container img {
+        max-width: 80%; /* Réduction de la largeur de l'image sur petits écrans */
+    }
+}
