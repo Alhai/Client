@@ -9,6 +9,7 @@ import { Article3Component } from './modules/article3/article3.component';
 import { ArticlesComponent } from './modules/articles/articles.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { CartDialogComponent } from './modules/cart-dialog/cart-dialog.component';
 import { ConceptComponent } from './modules/concept/concept.component';
 import { ContactComponent } from './modules/contact/contact.component';
 import { CreateCategoryComponent } from './modules/admin/dialogs/create-category/create-category.component';
@@ -42,10 +43,10 @@ import { NgModule } from '@angular/core';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { PaymentComponent } from './modules/payment/payment.component';
 import { RegisterComponent } from './modules/register/register.component';
+import { ShoppingCartComponent } from './modules/shopping-cart/shopping-cart.component';
 import { SubscribeComponent } from './modules/subscribe/subscribe.component';
 import { TrimonthlyComponent } from './modules/offers/trimonthly/trimonthly.component';
 import { UniqueComponent } from './modules/offers/unique/unique.component';
-import { ShoppingCartComponent } from './modules/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { ShoppingCartComponent } from './modules/shopping-cart/shopping-cart.com
     ArticlesComponent,
     Article3Component,
     ShoppingCartComponent,
+    CartDialogComponent,
 
   ],
   imports: [

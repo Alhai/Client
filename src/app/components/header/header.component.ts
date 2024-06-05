@@ -1,3 +1,4 @@
+import { CartService } from 'src/app/services/cart.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,14 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  public isMenuOpen = false; // Gère l'état d'ouverture du menu
+  public isMenuOpen = false;  
+  numberOfItemsInCart: number = 0;
 
-  // Fonction pour ouvrir le menu
+  constructor(private cartService: CartService) {
+    this.cartService.getCurrentItemCount().subscribe((count: number) => {
+      console.log('Cart count updated:', count);
+      this.numberOfItemsInCart = count;
+    });
+  }
+
   openMenu() {
     this.isMenuOpen = true;
   }
 
-  // Fonction pour fermer le menu
   closeMenu() {
     this.isMenuOpen = false;
   }

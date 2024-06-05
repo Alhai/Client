@@ -1,0 +1,31 @@
+.product-image img {
+    width: 60px; /* Adjust size as needed */
+  }
+  
+  .card-header-content {
+    flex-grow: 1;
+    padding-left: 10px;
+  }
+  
+  .close-button {
+    margin-left: auto;
+  }
+  
+  .mat-card-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .payment-button {
+    background-color: #007BFF; /* Example color */
+    color: white;
+  }
+  

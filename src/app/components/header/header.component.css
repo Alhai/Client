@@ -23,13 +23,18 @@
 .action-icons button:last-child {
   margin-right: 0;
 }
-
+.nav-buttons button.active-link {
+  color: rgb(78, 40, 1);
+}
 .nav-buttons button:hover,
 .action-icons button:hover,
 .mat-icon {
   color: rgb(78, 40, 1);
 }
 
+img{
+  width: 70%;
+}
 /* Media Queries pour Responsive Design */
 @media (max-width: 768px) {
   .mat-toolbar {

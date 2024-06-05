@@ -1,10 +1,10 @@
 <div class="shopping-cart-container">
     <div class="cart-info-section">
-        <div class="cart-connect">
-            <mat-card-content>
-                Vous avez déjà un compte ? <span class="loginLink" routerLink="/login" style="padding: 0; margin: 0;">Connectez-vous</span>
-              </mat-card-content>
-        </div>
+      <div class="cart-connect">
+        <mat-card-content>
+          Vous avez déjà un compte ? <span class="loginLink" routerLink="/login" style="padding: 0; margin: 0;">Connectez-vous</span>
+        </mat-card-content>
+      </div>
       <h2 class="cart-info-title">Informations de commande</h2>
   
       <mat-form-field>
@@ -26,16 +26,33 @@
     </div>
   
     <div class="cart-summary-section">
-        <p>Votre commande</p>
-      <div class="cart-item">
-        <img src="../../../assets/homepage/pearl-box.jpg" alt="Product Image">
-        <div class="cart-item-details">
-          <h3>Abonnement annuel</h3>
-            <span>Quantité 1</span>
-        </div>
-        <span class="cart-item-price">300€</span>
+      <h1>Panier</h1>
+      <div class="cart-item" *ngFor="let item of cartItems">
+        <mat-card>
+          <mat-card-header>
+            <div class="product-image">
+              <img mat-card-image [src]="item.imagePath" alt="{{ item.name }}">
+            </div>
+            <div class="card-header-content">
+              <mat-card-title>{{ item.name }} <mat-card-subtitle>quantité : {{ item.quantity }}</mat-card-subtitle></mat-card-title>
+              <mat-card-subtitle>{{ item.price | currency:'EUR' }}</mat-card-subtitle>
+            </div>
+            <button mat-icon-button (click)="removeItem(item)" class="close-button">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-card-header>
+          <mat-divider></mat-divider>
+          <mat-card-footer class="card-footer">
+            <div class="delivery-charges">
+              Frais de livraison: <strong>Gratuit</strong>
+            </div>
+            <div class="total-price">
+              Total TVA incl: <strong>{{ item.price * item.quantity | currency:'EUR' }}</strong>
+            </div>
+          </mat-card-footer>
+        </mat-card>
       </div>
-  <hr/>
+      <hr />
       <div class="promo-code-input">
         <mat-form-field>
           <mat-label>Code promo</mat-label>
@@ -43,11 +60,11 @@
         </mat-form-field>
         <button mat-button (click)="applyPromoCode()">Appliquer</button>
       </div>
-   
       <hr />
       <div class="cart-total">
         <span class="cart-total-label">Total:</span>
-        <span class="cart-total-price">300€</span>
+        <span class="cart-total-price">{{ totalPrice | currency:'EUR' }}</span>
       </div>
     </div>
   </div>
+  

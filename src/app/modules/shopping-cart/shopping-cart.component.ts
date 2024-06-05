@@ -1,3 +1,5 @@
+import { CartItem, CartService } from 'src/app/services/cart.service';
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,15 +12,32 @@ export class ShoppingCartComponent {
   customerEmail = '';
   customerPhone = '';
   promoCode = ''; 
+  cartItems: CartItem[] = [];
+  totalPrice: number = 0;
 
-  openLoginDialog() {
+  constructor(private cartService: CartService) {}
+
+  ngOnInit(): void {
+    this.cartItems = this.cartService.getItems();
+    this.calculateTotal();
   }
 
-  placeOrder() {
+  calculateTotal(): void {
+    this.totalPrice = this.cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   }
 
-  applyPromoCode() {
- 
+  removeItem(item: CartItem): void {
+    this.cartService.removeFromCart(item.name);
+    this.cartItems = this.cartService.getItems();
+    this.calculateTotal();
+  }
+
+  placeOrder(): void {
+    // Logic to place order
+    console.log('Order placed');
+  }
+
+  applyPromoCode(): void {
     console.log('Promo code applied:', this.promoCode);
   }
 }

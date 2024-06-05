@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'articles', component: ArticlesComponent },
   { path: 'article-3', component: Article3Component },
-  { path: 'shopping-cart', component: ShoppingCartComponent },
+  { path: 'cart', component: ShoppingCartComponent },
 
 
 

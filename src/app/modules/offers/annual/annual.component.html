@@ -10,12 +10,17 @@
     <div class="card-text-content">
       <h2>12 Box soit 1 box / mois</h2>
       <p>
-        Des produits artisanaux français<br />
-        Une réduction de -**%<br />
-        Des thématiques chaque trimestre
+        <span> Des produits artisanaux français</span>
+       <br />
+       <br />
+       <span>29% de réduction</span>
+       <br />
+       <br />
+       <span>Des thématiques chaque trimestre</span>
+        
       </p>
       <mat-card-actions>
-        <button mat-raised-button color="primary" routerLink="/shopping-cart">
+        <button mat-raised-button color="primary" (click)="buyBox(productAnnual)">
           J'achète ma box
         </button>
       </mat-card-actions>

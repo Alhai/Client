@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-header>
+      <div class="product-image">
+        <img mat-card-image [src]="data.cartItem.imagePath" alt="{{ data.cartItem.name }}">
+      </div>
+      <div class="card-header-content">
+        <mat-card-title>{{ data.cartItem.name }}  <mat-card-subtitle>quantité : {{ data.cartItem.quantity }}</mat-card-subtitle> </mat-card-title>
+        <mat-card-subtitle>{{ data.cartItem.price | currency:'EUR' }}</mat-card-subtitle>
+      </div>
+      <button mat-icon-button (click)="removeFromCart()" class="close-button">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-footer class="card-footer">
+      <div class="delivery-charges">
+        Frais de livraison: <strong>Gratuit</strong>
+      </div>
+      <div class="total-price">
+        Total TVA incl: <strong>{{ data.cartItem.price | currency:'EUR' }}</strong>
+      </div>
+      <button mat-button [mat-dialog-close]="'checkout'" class="payment-button" routerLink="/cart">Paiement</button>
+    </mat-card-footer>
+  </mat-card>
+  

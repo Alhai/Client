@@ -2,7 +2,6 @@
     display: flex;
     gap: 20px;
     padding: 2rem;
-    text-align: center; /* Can be removed if you prefer left alignment */
   }
   
   .cart-info-section {
@@ -14,27 +13,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(197, 137, 93); ;
+    background-color: rgb(197, 137, 93);
   }
   
   .cart-item {
-    display: flex; /* Remove align-items: center; */
+    width: 100%; /* Ensure the card takes the full width */
+    margin-bottom: 20px;
   }
   
-  .cart-item img {
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
+  .product-image img {
+    width: 60px;
   }
   
-  .cart-item-details {
+  .card-header-content {
+    flex-grow: 1;
+    padding-left: 10px;
+  }
+  
+  .close-button {
+    margin-left: auto;
+  }
+  
+  .mat-card-header {
     display: flex;
-    flex-direction: column; /* Remove if you want details side-by-side */
+    align-items: center;
   }
   
-  .cart-item-price {
-    font-weight: bold;
-    /* Add margin-left: auto; to align right within .cart-item-details */
+  .card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
   }
   
   .promo-code-input {
@@ -72,12 +82,13 @@
     padding: 1rem;
   }
   
-  .loginLink{
+  .loginLink {
     cursor: pointer;
     text-decoration: underline;
   }
-
-  hr{
+  
+  hr {
     width: 100%;
     margin: 1rem;
   }
+  
