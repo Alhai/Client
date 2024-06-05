@@ -35,9 +35,8 @@ h1, h2, p {
     height: auto;
 }
 
-/* Responsive design pour les images */
 @media (max-width: 768px) {
     .blog-image-container img {
-        max-width: 80%; /* Réduction de la largeur de l'image sur petits écrans */
+        max-width: 80%;
     }
 }

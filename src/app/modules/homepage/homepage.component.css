@@ -262,7 +262,7 @@ button {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 24px; /* Réduire la taille pour les petits écrans */
+    font-size: 24px; 
     margin: 10px;
   }
   h2 {
@@ -274,15 +274,14 @@ button {
     margin: 6px;
   }
   p {
-    font-size: 16px; /* Ajuster la taille du texte pour améliorer la lisibilité */
+    font-size: 16px; 
     margin: 4px;
   }
 }
 
-/* Ajustements pour très petits écrans */
 @media (max-width: 480px) {
   h1 {
-    font-size: 20px; /* Encore plus petit pour les très petits écrans */
+    font-size: 20px; 
   }
   h2 {
     font-size: 18px;
