@@ -13,6 +13,7 @@ import { HomepageComponent } from './modules/homepage/homepage.component';
 import { LoginComponent } from './modules/login/login.component';
 import { NgModule } from '@angular/core';
 import { RegisterComponent } from './modules/register/register.component';
+import { ShopComponent } from './modules/shop/shop.component';
 import { ShoppingCartComponent } from './modules/shopping-cart/shopping-cart.component';
 import { SubscribeComponent } from './modules/subscribe/subscribe.component';
 import { TrimonthlyComponent } from './modules/offers/trimonthly/trimonthly.component';
@@ -34,8 +35,9 @@ const routes: Routes = [
   { path: 'admin-faq', component: AdminFaqComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'articles', component: ArticlesComponent },
-  { path: 'article-3', component: Article3Component },
+  { path: 'article', component: Article3Component },
   { path: 'cart', component: ShoppingCartComponent },
+  { path: 'shop', component: ShopComponent },
 
 
 
@@ -44,7 +46,9 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled' 
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

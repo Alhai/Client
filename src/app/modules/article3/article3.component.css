@@ -16,8 +16,15 @@ body {
     max-width: 800px; /* Limite maximale de la largeur */
     margin: 0 auto; /* Centrage horizontal du contenu */
 }
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    padding-top: 1rem;
+    text-align: center;
+    color: rgb(78, 40, 1);
+  }
 
-h1, h2, p {
+ h2, p {
     text-align: center;
     width: 100%;
     margin-top: 20px;

@@ -17,7 +17,7 @@
       et faites en sorte que chaque achat compte
     </h3>
     <mat-card-actions>
-      <button mat-button>J'achète ma box</button>
+      <button mat-button routerLink="/shop">J'achète ma box</button>
     </mat-card-actions>
   </div>
   <img src="../../../assets/homepage/box.png" alt="" class="right-side-image" />
@@ -237,69 +237,20 @@
 </mat-card>
 
 <mat-card style="background-color: rgb(197, 137, 93)">
-  <h2 class="white-color">Notre Blog</h2>
-  <div class="cards-container blogs-section">
-    <mat-card class="example-card">
-      <img
-        mat-card-image
-        src="../../../assets/articles/exterior-painting.jpg"
-        alt="Exploration artistique"
-      />
-      <mat-card-content>
-        <h3 class="dark-brown-color">
-          Exploration artistique : Comment trouver l'inspiration dans le monde
-          qui nous entoure
-        </h3>
-        <p class="dark-brown-color">
-          Découvrez comment observer attentivement le monde qui nous entoure
-          peut nourrir votre créativité artistique, avec des conseils pratiques
-          pour stimuler votre imagination et redécouvrir la beauté dans les
-          petites choses de la vie.
-        </p>
-        <mat-card-actions>LIRE PLUS</mat-card-actions>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="example-card">
-      <img
-        mat-card-image
-        src="../../../assets/articles/pottery.jpg"
-        alt="L'art du recyclage"
-      />
-      <mat-card-content>
-        <h3 class="dark-brown-color">
-          Les 7 loisirs artistiques accessibles à tous, peu importe votre niveau
-          de talent
-        </h3>
-        <p class="dark-brown-color">
-          Explorez comment donner une nouvelle vie à vos déchets en les
-          transformant en œuvres d'art uniques, avec des techniques créatives et
-          des idées inspirantes pour des projets écologiques qui transcendent
-          les simples matériaux recyclés.
-        </p>
-        <mat-card-actions>LIRE PLUS</mat-card-actions>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="example-card">
-      <img
-        mat-card-image
-        src="../../../assets/homepage/work-plan.jpg"
-        alt="Peindre avec passion"
-      />
-      <mat-card-content>
-        <h3 class="dark-brown-color">
-          Peindre avec passion : Les secrets pour libérer votre créativité sur
-          la toile
-        </h3>
-        <p class="dark-brown-color">
-          Plongez dans le processus de création artistique avec passion,
-          découvrez des conseils pour surmonter les blocages créatifs et trouvez
-          votre propre style distinctif dans la peinture, en cultivant une
-          connexion profonde avec votre sujet et en exprimant votre vision
-          unique à travers la toile.
-        </p>
-        <mat-card-actions>LIRE PLUS</mat-card-actions>
-      </mat-card-content>
-    </mat-card>
+  <h2 class="white-color">Nos Articles</h2>
+  <div class="blog-row">
+    <div class="blog-item" *ngFor="let article of articles">
+      <mat-card class="blog-card">
+        <img mat-card-image [src]="article.imgSrc" [alt]="article.imgAlt" class="blog-card-image" />
+        <mat-card-content class="">
+          <h2 class="blog-card-content-h2">{{ article.title }}</h2>
+          <p  class="blog-card-content-p">{{ article.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button routerLink="/article">LIRE PLUS</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
 </mat-card>
 

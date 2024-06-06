@@ -1,0 +1,6 @@
+<h2>{{ data.title }}</h2>
+<div class="article-content">
+  <img [src]="data.imgSrc" [alt]="data.imgAlt" class="article-image">
+  <p>{{ data.description }}</p>
+</div>
+<button mat-button (click)="closeDialog()">Fermer</button>

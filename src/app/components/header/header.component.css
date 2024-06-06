@@ -1,22 +1,22 @@
-/* Styles de base, déjà fournis */
 .mat-toolbar {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   height: 120px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
-.toolbar-section {
+.nav-buttons {
   display: flex;
   align-items: center;
+  margin-left: -10rem; 
 }
 
 .nav-buttons button,
 .action-icons button {
   margin-right: 8px;
   color: rgb(197, 137, 93);
+  
 }
 
 .nav-buttons button:last-child,
@@ -58,8 +58,7 @@ img{
   .nav-buttons button,
   .action-icons button {
     margin: 5px;
-    font-size: 14px; /* Ajustez la taille du texte pour les écrans plus petits */
+    font-size: 14px; 
   }
 }
 
-/* Autres ajustements si nécessaire */

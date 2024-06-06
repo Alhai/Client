@@ -47,6 +47,8 @@ import { ShoppingCartComponent } from './modules/shopping-cart/shopping-cart.com
 import { SubscribeComponent } from './modules/subscribe/subscribe.component';
 import { TrimonthlyComponent } from './modules/offers/trimonthly/trimonthly.component';
 import { UniqueComponent } from './modules/offers/unique/unique.component';
+import { ArticleDialogComponent } from './modules/article-dialog/article-dialog.component';
+import { ShopComponent } from './modules/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,8 @@ import { UniqueComponent } from './modules/offers/unique/unique.component';
     Article3Component,
     ShoppingCartComponent,
     CartDialogComponent,
+    ArticleDialogComponent,
+    ShopComponent,
 
   ],
   imports: [
