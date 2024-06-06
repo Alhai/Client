@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.title {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.custom-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: calc(100% - 40px);
+}
+
+.product-image {
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.card-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.mat-card-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.mat-card-actions button {
+    width: auto;
+    /* padding: 10px 20px; */
+    /* border-radius: 5px; */
+    cursor: pointer;
+    align-items: center;
+}
+
+.mat-card-actions button:hover {
+    background-color: rgb(197, 137, 93);
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin: 0 20px;
+}
+
+.ratings-container {
+    flex: 0.2;
+    padding: 20px;
+}
+
+.accordion-container {
+    flex: 0.8;
+    padding: 20px;
+}
+
+.ratings-card {
+    margin-bottom: 10px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.payment-icon {
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+    padding: 10px;
+}
+
+.payment-icon.selected {
+    color: rgb(78, 40, 1);
+}
+
+.payment-icon:hover {
+    color: rgb(197, 137, 93);
+}
+
+img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    padding-right: 1rem;
+  }
+  
+  .payment-icon {
+    width: 40px; 
+    height: auto;
+  }
+  
+  .payment-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .payment-icon {
+      width: 24px; /* Reduce width for smaller screens */
+      margin: 0 5px; /* Adjust spacing for smaller screens */
+    }
+  }

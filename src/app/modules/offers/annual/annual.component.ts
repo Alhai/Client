@@ -1,16 +1,8 @@
-import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
+import { CartItem, CartService } from 'src/app/services/cart.service';
 
+import { CartDialogComponent } from '../../cart-dialog/cart-dialog.component';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { CartDialogComponent } from '../../cart-dialog/cart-dialog.component';
-import { CartItem, CartService } from 'src/app/services/cart.service';
-// export interface Product {
-//   name: string;
-//   price: number;
-//   quantity: number;
-//   imagePath: string;
-// }
-
 
 @Component({
   selector: 'app-annual',
@@ -19,7 +11,6 @@ import { CartItem, CartService } from 'src/app/services/cart.service';
 })
 export class AnnualComponent {
   panelOpenState = false;
-  public payPalConfig?: IPayPalConfig;
   selectedPayment: string = ''; 
   showSuccess!: boolean;
 
@@ -31,9 +22,7 @@ export class AnnualComponent {
     imagePath: '../../../assets/homepage/paint-box.jpg'
   };
 
-  ngOnInit(): void {
-    this.initConfig();
-  }
+
   buyBox(product : CartItem): void {
     const cartItem: CartItem = {
       name: product.name,
@@ -73,68 +62,5 @@ export class AnnualComponent {
       }
     });
   }
-  private initConfig(): void {
-    this.payPalConfig = {
-      currency: 'EUR',
-      clientId: 'sb',
-      createOrderOnClient: (data) => <ICreateOrderRequest>{
-        intent: 'CAPTURE',
-        purchase_units: [
-          {
-            amount: {
-              currency_code: 'EUR',
-              value: '9.99',
-              breakdown: {
-                item_total: {
-                  currency_code: 'EUR',
-                  value: '9.99'
-                }
-              }
-            },
-            items: [
-              {
-                name: 'Enterprise Subscription',
-                quantity: '1',
-                category: 'DIGITAL_GOODS',
-                unit_amount: {
-                  currency_code: 'EUR',
-                  value: '9.99',
-                },
-              }
-            ]
-          }
-        ]
-      },
-      advanced: {
-        commit: 'true'
-      },
-      style: {
-        label: 'paypal',
-        layout: 'vertical'
-      },
-      onApprove: (data, actions) => {
-        console.log('onApprove - transaction was approved, but not authorized', data, actions);
-        actions.order.get().then((details: any) => {
-          console.log('onApprove - you can get full order details inside onApprove: ', details);
-        });
-      },
-      onClientAuthorization: (data) => {
-        console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
-        this.showSuccess = true;
-      },
-      onCancel: (data, actions) => {
-        console.log('OnCancel', data, actions);
-      },
-      onError: err => {
-        console.log('OnError', err);
-      },
-      onClick: (data, actions) => {
-        console.log('onClick', data, actions);
-      },
-    };
-  }
-  selectPaymentMethod(method: string) {
-    this.selectedPayment = method; // Mise à jour de la méthode de paiement sélectionnée
-    console.log("Méthode de paiement sélectionnée: ", method);
-  }
+  
 }

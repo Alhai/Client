@@ -1,1 +1,108 @@
-<p>unique works!</p>
+<mat-card class="overall-container">
+    <h1 class="title">Abonnement Trimensuel</h1>
+  
+    <mat-card class="custom-card">
+      <img
+        mat-card-image
+        src="../../../../assets/homepage/pearl-box.jpg"
+        alt="Abonnement Trimensuel"
+      />
+      <div class="card-text-content">
+        <h2>1 Box </h2>
+        <p>
+          <span> Des produits artisanaux français</span>
+         <br />
+         <br />
+         <span>29% de réduction</span>
+         <br />
+         <br />
+         <span>Des thématiques chaque trimestre</span>
+          
+        </p>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="buyBox(uniqueProduct)">
+            J'achète ma box
+          </button>
+        </mat-card-actions>
+        <mat-card-content>
+          <img
+            src="../../../../assets/payment-icons/PayPal.svg"
+            alt="Paypal"
+            class="payment-icon"
+          />
+          <img
+            src="../../../../assets/payment-icons/Visa.svg"
+            alt="Visa"
+            class="payment-icon"
+          />
+          <img
+            src="../../../../assets/payment-icons/Cb.svg"
+            alt="Mastercard"
+            class="payment-icon"
+          />
+        </mat-card-content>
+      </div>
+    </mat-card>
+  
+    <div class="content-container">
+      <div class="ratings-container">
+        <mat-card class="ratings-card">
+          <mat-list>
+            <mat-list-item
+              >Livraison
+              <span class="stars">★★★★★</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item
+              >Service client
+              <span class="stars">★★★★★</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item
+              >Contenu
+              <span class="stars">★★★★★</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item
+              >Rentabilité
+              <span class="stars">★★★★★</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-card>
+      </div>
+      <div class="accordion-container">
+        <mat-card>
+          <mat-accordion>
+            <mat-expansion-panel
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title>Que contient la box ?</mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title>Livraison</mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title>Politique de remboursement</mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-card>
+      </div>
+    </div>
+  </mat-card>
+  

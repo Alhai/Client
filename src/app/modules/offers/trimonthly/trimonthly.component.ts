@@ -1,84 +1,67 @@
+import { CartItem, CartService } from 'src/app/services/cart.service';
+
+import { CartDialogComponent } from '../../cart-dialog/cart-dialog.component';
 import { Component } from '@angular/core';
-import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-trimonthly',
   templateUrl: './trimonthly.component.html',
   styleUrls: ['./trimonthly.component.css']
 })
-export class TrimonthlyComponent {
+export class TrimonthlyComponent {  
   panelOpenState = false;
-  public payPalConfig?: IPayPalConfig;
-  
-  selectedPayment: string = ''; // Variable pour garder trace du paiement sélectionné
+  selectedPayment: string = ''; 
   showSuccess!: boolean;
 
-  ngOnInit(): void {
-    this.initConfig();
+  constructor(private cartService: CartService, public dialog: MatDialog,  ) { }
+  trimonthlyProduct : CartItem = {
+    name: 'Abonnement de trois mois',
+    price: 90,
+    quantity: 1,
+    imagePath: '../../../../assets/homepage/wool-box.jpg'
+  };
+
+
+  buyBox(product : CartItem): void {
+    const cartItem: CartItem = {
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+      imagePath: product.imagePath
+    };
+    this.cartService.addToCart(cartItem);
+    this.openDialog(cartItem);
   }
 
-  private initConfig(): void {
-    this.payPalConfig = {
-    currency: 'EUR',
-    clientId: 'sb',
-    createOrderOnClient: (data) => <ICreateOrderRequest>{
-      intent: 'CAPTURE',
-      purchase_units: [
-        {
-          amount: {
-            currency_code: 'EUR',
-            value: '9.99',
-            breakdown: {
-              item_total: {
-                currency_code: 'EUR',
-                value: '9.99'
-              }
-            }
-          },
-          items: [
-            {
-              name: 'Enterprise Subscription',
-              quantity: '1',
-              category: 'DIGITAL_GOODS',
-              unit_amount: {
-                currency_code: 'EUR',
-                value: '9.99',
-              },
-            }
-          ]
+  openDialog(product : CartItem): void {
+    let dialogRef = this.dialog.open(CartDialogComponent, {
+      width: '400px',
+      height: '180px',
+      position: { top: '0', right: '0' },
+      data: { 
+        cartItem: {
+          name: product.name,
+          price: product.price,
+          quantity: 1, 
+          imagePath: product.imagePath  
         }
-      ]
-    },
-    advanced: {
-      commit: 'true'
-    },
-    style: {
-      label: 'paypal',
-      layout: 'vertical'
-    },
-    onApprove: (data, actions) => {
-      console.log('onApprove - transaction was approved, but not authorized', data, actions);
-      actions.order.get().then((details: any) => {
-        console.log('onApprove - you can get full order details inside onApprove: ', details);
-      });
-    },
-    onClientAuthorization: (data) => {
-      console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
-      this.showSuccess = true;
-    },
-    onCancel: (data, actions) => {
-      console.log('OnCancel', data, actions);
-    },
-    onError: err => {
-      console.log('OnError', err);
-    },
-    onClick: (data, actions) => {
-      console.log('onClick', data, actions);
-    },
-  };
+      }
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'checkout') {
+        // Logic for checkout
+        console.log('Go to checkout');
+      } else if (result === 'continue') {
+        // Logic to continue shopping
+        console.log('Continue shopping');
+      } else if (result === 'remove') {
+        // Logic to remove item from cart
+        console.log('Item removed');
+      }
+    });
   }
-  selectPaymentMethod(method: string) {
-    this.selectedPayment = method; // Mise à jour de la méthode de paiement sélectionnée
-    console.log("Méthode de paiement sélectionnée: ", method);
-  }
+  
+
 }
