@@ -1,9 +1,17 @@
 h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  padding-top: 1rem;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
 }
-
+.dark-brown-color, .center-text {
+  color: rgb(78, 40, 1);
+}
+.center-text {
+  text-align: center;
+  width: 100%;
+  margin: 2rem;
+}
 .contact-form {
   display: flex;
   flex-direction: column;

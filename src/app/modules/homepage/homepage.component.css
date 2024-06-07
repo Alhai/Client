@@ -1,7 +1,8 @@
-
-.example-card, .custom-card, .cards-container {
-  max-width: 100%; 
-  overflow: hidden; 
+.example-card,
+.custom-card,
+.cards-container {
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .custom-card {
@@ -25,23 +26,21 @@
 .dark-brown-color {
   color: rgb(78, 40, 1);
 }
-.bk-light-brown-color{
-  background-color:rgb(197, 137, 93);
+.bk-light-brown-color {
+  background-color: rgb(197, 137, 93);
 }
-.bk-white-color{
-  background-color:rgb(255, 255, 255);
+.bk-white-color {
+  background-color: rgb(255, 255, 255);
 }
 .white-color {
   color: white;
   text-align: center;
-
 }
 
-.card-border{
+.card-border {
   border-color: rgb(78, 40, 1);
   align-items: center;
 }
-
 
 h1 span,
 h2 span {
@@ -55,7 +54,7 @@ h2 span {
   width: 100%;
 }
 
- .center-text {
+.center-text {
   text-align: center;
   width: 100%;
   margin: 2rem;
@@ -71,9 +70,9 @@ h2 span {
 }
 .testimonials-section {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 20px 0; 
+  padding: 20px 0;
 }
 .blog-row {
   display: flex;
@@ -84,12 +83,12 @@ h2 span {
 }
 
 .blog-item {
-  flex: 1 1 30%; 
-  margin: 15px; 
+  flex: 1 1 30%;
+  margin: 15px;
   box-sizing: border-box;
 }
 .blog-card-image {
-  width: 100%; 
+  width: 100%;
   height: 200px;
   object-fit: cover;
 }
@@ -98,10 +97,10 @@ h2 span {
   flex-direction: column;
   max-width: 400px;
   min-height: 500px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .blog-card-content {
-  flex: 1;  
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -116,24 +115,23 @@ h2 span {
 .blog-card-content-p {
   font-size: 1em;
   color: #666;
-  overflow: hidden; 
+  overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4; 
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 
 .example-card {
-  flex: 1 1 30%; 
+  flex: 1 1 30%;
   margin: 10px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   max-width: 350px;
-  border: 2px solid rgb(78, 40, 1); 
+  border: 2px solid rgb(78, 40, 1);
   padding: 10px;
   border-radius: 0.5rem;
   text-align: center;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
 h1 {
@@ -175,7 +173,6 @@ mat-card-actions button:hover {
   flex-wrap: wrap;
 }
 
-
 .features-section .example-card img[mat-card-image] {
   width: 50px;
   height: 50px;
@@ -198,26 +195,21 @@ mat-card-actions button:hover {
 }
 .responsive-video {
   width: 60%;
-  height: auto; 
-  margin: auto; 
+  height: auto;
+  margin: auto;
   display: block;
   margin-top: 2rem;
 }
 
 .strikethrough {
   text-decoration: line-through;
-  color: gray; 
+  color: gray;
 }
 
-.dark-brown-color, .center-text {
+.dark-brown-color,
+.center-text {
   text-align: center;
   color: rgb(78, 40, 1);
-}
-
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .example-card {
@@ -288,28 +280,27 @@ button {
   width: 100%;
   margin-top: 20px;
   padding: 1rem;
-
 }
-.example-full-width{
+.example-full-width {
   width: 100%;
 }
 
-.news-text{
+.news-text {
   margin-left: 0.5rem;
   padding: 1rem;
   text-align: center;
 }
 
-.news-title{
-    margin-top: 1rem;
-    margin-right: 2rem;
-    text-align: center;
-    color: rgb(78, 40, 1);
+.news-title {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  text-align: center;
+  color: rgb(78, 40, 1);
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 24px; 
+    font-size: 24px;
     margin: 10px;
   }
   h2 {
@@ -321,14 +312,14 @@ button {
     margin: 6px;
   }
   p {
-    font-size: 16px; 
+    font-size: 16px;
     margin: 4px;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 20px; 
+    font-size: 20px;
   }
   h2 {
     font-size: 18px;
