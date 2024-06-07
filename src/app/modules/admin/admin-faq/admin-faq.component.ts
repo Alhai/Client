@@ -2,11 +2,11 @@ import { Category, CreateFaqComponent } from '../dialogs/create-faq/create-faq.c
 import { Component, OnInit } from '@angular/core';
 
 import { CategoryItemModel } from 'src/app/models/category-faq.dto';
-import { CategoryService } from 'src/app/services/category-service';
+import { CategoryService } from 'src/app/webservices/category-webservice';
 import { CreateCategoryComponent } from '../dialogs/create-category/create-category.component';
 import { EditFaqComponent } from '../dialogs/edit-faq/edit-faq.component';
 import { FaqItemsModel } from 'src/app/models/faq-dto';
-import { FaqService } from 'src/app/services/faq-service';
+import { FaqService } from 'src/app/webservices/faq-webservice';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({

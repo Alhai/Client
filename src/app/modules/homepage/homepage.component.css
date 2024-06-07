@@ -154,7 +154,16 @@ p,
 mat-card-actions button {
   font-size: 1.2em;
 }
+.price {
+  font-size: 1.4em;
+  font-weight: bold;
+}
 
+.strikethrough {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 1em;
+}
 mat-card-actions button {
   background-color: rgb(78, 40, 1);
   color: white;

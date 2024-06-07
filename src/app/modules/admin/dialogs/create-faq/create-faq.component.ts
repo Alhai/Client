@@ -1,7 +1,7 @@
 import { FormControl, FormGroup } from '@angular/forms';
 
 import { CategoryItemModel } from 'src/app/models/category-faq.dto';
-import { CategoryService } from 'src/app/services/category-service';
+import { CategoryService } from 'src/app/webservices/category-webservice';
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSelectChange } from '@angular/material/select';

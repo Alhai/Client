@@ -116,7 +116,9 @@
       />
       <mat-card-content>
         <p>Box individuelle</p>
-        <p>35 €</p>
+        <p>
+          <span class="discount-price">35 €</span>
+        </p>
       </mat-card-content>
       <mat-card-actions>
         <button routerLink="unique">Je M'abonne</button>
@@ -129,8 +131,15 @@
         alt="Abonnement Trimestriel"
       />
       <mat-card-content>
-        <p>Abonnement Trimestriel (3 box)</p>
-        <p>90 € <span class="strikethrough">105 €</span></p>
+        <p>
+          Abonnement Trimestriel <br />
+          (3 box)
+        </p>
+
+        <p>
+          <span class="discount-price">90 €</span>
+          <span class="strikethrough">105 €</span>
+        </p>
       </mat-card-content>
       <mat-card-actions>
         <button routerLink="trimonthly">Je M'abonne</button>
@@ -143,8 +152,15 @@
         alt="Abonnement Annuel"
       />
       <mat-card-content>
-        <p>Abonnement Annuel (12 box)</p>
-        <p>300 € <span class="strikethrough">420 €</span></p>
+        <p>
+          Abonnement Annuel <br />
+          (12 box)
+        </p>
+
+        <p>
+          <span class="discount-price">300 €</span>
+          <span class="strikethrough">420 €</span>
+        </p>
       </mat-card-content>
       <mat-card-actions>
         <button routerLink="annual">Je M'abonne</button>
@@ -157,7 +173,6 @@
     <source [src]="videoUrl" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-
 </mat-card>
 
 <mat-card>
@@ -241,10 +256,15 @@
   <div class="blog-row">
     <div class="blog-item" *ngFor="let article of articles">
       <mat-card class="blog-card">
-        <img mat-card-image [src]="article.imgSrc" [alt]="article.imgAlt" class="blog-card-image" />
+        <img
+          mat-card-image
+          [src]="article.imgSrc"
+          [alt]="article.imgAlt"
+          class="blog-card-image"
+        />
         <mat-card-content class="">
           <h2 class="blog-card-content-h2">{{ article.title }}</h2>
-          <p  class="blog-card-content-p">{{ article.description }}</p>
+          <p class="blog-card-content-p">{{ article.description }}</p>
         </mat-card-content>
         <mat-card-actions>
           <button mat-button routerLink="/article">LIRE PLUS</button>

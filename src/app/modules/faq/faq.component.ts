@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CategoryItemModel } from 'src/app/models/category-faq.dto';
-import { CategoryService } from 'src/app/services/category-service';
+import { CategoryService } from 'src/app/webservices/category-webservice';
 import { FaqItemsModel } from 'src/app/models/faq-dto';
-import { FaqService } from 'src/app/services/faq-service';
+import { FaqService } from 'src/app/webservices/faq-webservice';
 
 @Component({
   selector: 'app-faq',

@@ -38,7 +38,16 @@
   color: white;
   text-align: center;
 }
+.price {
+  font-size: 1.4em;
+  font-weight: bold;
+}
 
+.strikethrough {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 1em;
+}
 .card-border {
   border-color: rgb(78, 40, 1);
   align-items: center;
