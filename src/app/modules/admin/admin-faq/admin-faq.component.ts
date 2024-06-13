@@ -6,7 +6,7 @@ import { CategoryService } from 'src/app/webservices/category-webservice';
 import { CreateCategoryComponent } from '../dialogs/create-category/create-category.component';
 import { EditFaqComponent } from '../dialogs/edit-faq/edit-faq.component';
 import { FaqItemsModel } from 'src/app/models/faq-dto';
-import { FaqService } from 'src/app/webservices/faq-webservice';
+import { FaqWebService } from 'src/app/webservices/faq-webservice';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -17,7 +17,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class AdminFaqComponent implements OnInit {
   faqs: FaqItemsModel[] = [];
   categories: CategoryItemModel[] = [];
-  constructor(private faqService: FaqService, public dialog: MatDialog, private categoryService: CategoryService,) { }
+  constructor(private faqService: FaqWebService, public dialog: MatDialog, private categoryService: CategoryService,) { }
 
   ngOnInit(): void {
     this.loadFaqs();
@@ -48,10 +48,16 @@ export class AdminFaqComponent implements OnInit {
   }
 
 
+
   deleteFaq(id: string): void {
     this.faqService.deleteFaq(id).subscribe({
-      next: () => this.faqs = this.faqs.filter(faq => faq.id !== id),
-      error: (err) => console.error(err)
+      next: () => {
+        this.faqs = this.faqs.filter(faq => faq.id !== id);
+        console.log('FAQ deleted successfully');
+      },
+      error: (err) => {
+        console.error('Failed to delete FAQ:', err);
+      }
     });
   }
 

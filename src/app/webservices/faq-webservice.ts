@@ -4,12 +4,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-console.log("TOTI", environment.apiUrl);
-
 @Injectable({
   providedIn: 'root'
 })
-export class FaqService {
+export class FaqWebService {
   private apiUrl = `${environment.apiUrl}/faq`;
 
   constructor(private http: HttpClient) { }

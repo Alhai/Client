@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CategoryItemModel } from 'src/app/models/category-faq.dto';
 import { CategoryService } from 'src/app/webservices/category-webservice';
 import { FaqItemsModel } from 'src/app/models/faq-dto';
-import { FaqService } from 'src/app/webservices/faq-webservice';
+import { FaqWebService } from 'src/app/webservices/faq-webservice';
 
 @Component({
   selector: 'app-faq',
@@ -15,7 +15,7 @@ export class FaqComponent implements OnInit {
   faqs: FaqItemsModel[] = [];
   selectedCategoryId?: string;
 
-  constructor(private faqService: FaqService, private categoryService: CategoryService) { }
+  constructor(private faqService: FaqWebService, private categoryService: CategoryService) { }
 
   ngOnInit(): void {
     this.loadCategories();
@@ -31,10 +31,12 @@ export class FaqComponent implements OnInit {
     this.selectedCategoryId = categoryId;
     this.faqService.getFaqsByCategoryId(categoryId).subscribe({
       next: (faqs) => {
-        this.faqs = faqs; 
+        this.faqs = faqs;
       },
       error: (error) => console.error('Error loading FAQs for category:', error),
       complete: () => console.log('FAQ loading complete for category')
     });
   }
+  
+  
 }

@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { CategoryItemModel } from 'src/app/models/category-faq.dto';
 import { CategoryService } from 'src/app/webservices/category-webservice';
 import { Component } from '@angular/core';
+import { FaqWebService } from 'src/app/webservices/faq-webservice';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSelectChange } from '@angular/material/select';
 
@@ -22,17 +23,18 @@ export class CreateFaqComponent {
   categoryId: string = '';
   categories: CategoryItemModel[] = [];
   faqForm: FormGroup;
-  
+
   constructor(
     public dialogRef: MatDialogRef<CreateFaqComponent>,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private faqWebService: FaqWebService
   ) {
     this.faqForm = new FormGroup({
       question: new FormControl(''),
       response: new FormControl(''),
       categoryId: new FormControl('')
     });
-   }
+  }
 
 
   ngOnInit(): void {
@@ -56,10 +58,23 @@ export class CreateFaqComponent {
       categoryIdControl.setValue(event.value);
     }
   }
-  
+
   onSubmit(): void {
     if (this.faqForm.valid) {
-      this.dialogRef.close(this.faqForm.value);
+      const formData = this.faqForm.value;
+      console.log('Submitting form data:', formData);
+
+      this.faqWebService.createFaq(formData).subscribe({
+        next: (newFaq) => {
+          console.log('FAQ created successfully:', newFaq);
+          this.dialogRef.close(newFaq);
+        },
+        error: (error) => {
+          console.error('Error creating FAQ:', error);
+        }
+      });
+    } else {
+      console.error('Form is not valid:', this.faqForm.errors);
     }
   }
 }

@@ -20,7 +20,7 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
-    "types": ["google.maps"]
+    "types": ["google.maps", "cypress"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -28,8 +28,5 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/global.d.ts"  // Assurez-vous que ce chemin correspond à l'emplacement de votre fichier
-  ]
+  "include": ["src/**/*.ts", "src/global.d.ts", "cypress/**/*.ts"]
 }

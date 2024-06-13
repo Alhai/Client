@@ -39,7 +39,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { PaymentComponent } from './modules/payment/payment.component';
 import { RegisterComponent } from './modules/register/register.component';
@@ -49,6 +49,7 @@ import { TrimonthlyComponent } from './modules/offers/trimonthly/trimonthly.comp
 import { UniqueComponent } from './modules/offers/unique/unique.component';
 import { ArticleDialogComponent } from './modules/article-dialog/article-dialog.component';
 import { ShopComponent } from './modules/shop/shop.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -107,7 +108,13 @@ import { ShopComponent } from './modules/shop/shop.component';
     MatTableModule,
     MatDialogModule,
     ReactiveFormsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
 
   providers: [],
